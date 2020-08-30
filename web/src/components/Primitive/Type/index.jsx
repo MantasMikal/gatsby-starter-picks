@@ -7,10 +7,7 @@ import styles from './Type.module.scss'
 import Element from '../Element'
 
 export const sizes = [
-  'display2',
-  'display1',
-  'displayHero',
-  'displayLarge',
+  'display',
   'menu',
   'title',
   'titleMedium',
@@ -35,7 +32,6 @@ const Type = ({
   bold,
   demi,
   heavy,
-  qoute,
   padded,
   ...rest
 }) => (
@@ -49,7 +45,6 @@ const Type = ({
       bold && styles.bold,
       demi && styles.demi,
       heavy && styles.heavy,
-      qoute && styles.qoute,
       padded && styles.padded,
       styles.common,
 

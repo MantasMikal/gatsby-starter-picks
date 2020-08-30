@@ -17,11 +17,8 @@
 
 .Title {
   color: $color-primary-white;
-
-  @include mq($breakpoint-desktop) {
-    font-size: 4.5vw;
-    line-height: 5vw;
-  }
+  font-size: 4.5vw;
+  line-height: 5vw;
 }
 
 .Subtitle {

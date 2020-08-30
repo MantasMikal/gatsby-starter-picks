@@ -11,7 +11,7 @@ const Hero = ({ heroImage, title, subtitle }) => {
     <div className={styles.Hero}>
       <Image image={heroImage} loading="eager" alt={title} />
       <Container size="wide" gutter center className={styles.Content}>
-        <Type size="displayHero" as="h2" className={styles.Title}>
+        <Type size="display1" as="h2" className={styles.Title}>
           {title}
         </Type>
         <Type size="subtitle" as="p" className={styles.Subtitle}>
