@@ -40,7 +40,7 @@ const serializers = {
       switch (props.node.style) {
         case 'title':
           return (
-            <Type as="h2" size="displayLarge" padded>
+            <Type as="h2" size="display" padded>
               {props.children}
             </Type>
           )

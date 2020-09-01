@@ -13,7 +13,7 @@ const BlogPostCarousel = ({ postNodes, title }) => {
   return (
     <section className={styles.BlogPostCarousel}>
       <Container size="wide" center gutter spacious hideOverflow>
-        <Type size="displayLarge" as="h2" className={styles.Title}>
+        <Type size="display" as="h2" className={styles.Title}>
           {title}
         </Type>
         <SmartLink to="/blog/" className={styles.ViewAll}>

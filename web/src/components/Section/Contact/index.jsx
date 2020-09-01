@@ -16,7 +16,7 @@ import styles from './Contact.module.scss'
 const Contact = ({ body, title }) => {
   return (
     <Container size="wide" center gutter spacious withNavSpace as="section">
-      <Type as="h1" size="displayLarge" className={styles.Title}>
+      <Type as="h1" size="display" className={styles.Title}>
         {title}
       </Type>
       {body && (
