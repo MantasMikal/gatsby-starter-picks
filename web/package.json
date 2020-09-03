@@ -57,7 +57,7 @@
     "gatsby-transformer-sharp": "^2.5.13",
     "jest-watch-typeahead": "^0.6.0",
     "node-sass": "^4.14.1",
-    "pure-react-carousel": "^1.27.1",
+    "pure-react-carousel": "^1.27.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",

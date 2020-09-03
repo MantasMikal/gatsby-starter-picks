@@ -19,7 +19,7 @@ const Carousel = (props) => {
   const isPhone = useMedia('(max-width: 600px)')
 
   // Re-render carousel on page load
-  // Fix for ssr not setting correct amount of slides
+  // Fixes ssr not setting correct amount of slides
   useEffect(() => {
     setSlidesPerPage(isTablet ? (isPhone ? 1 : 2) : 3)
   }, [isPhone, isTablet, setSlidesPerPage])
