@@ -73,7 +73,7 @@ sanity login
 # GraphiQL explorer at http://localhost:8000/___graphql
 npm start
 
-# Quickly setup Sanity.io CMS
+# When you are ready setup the Sanity.io CMS
 # Create a project and deploy Graphql API
 # Once you launch the site you must go to studio and add some data to Site Settings and Pages/Home
 # Then restart the site
