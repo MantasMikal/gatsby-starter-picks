@@ -46,8 +46,7 @@
 - [x] SCSS Modules
 - [x] Buletproof base level component library to get the boring stuff out of the way
 - [x] Useful set of SCSS utility [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
-- [x] Tests included
-- [x] Created with accessibility in mind
+- [x] Tested
 - [x] Storybook 6 integration
 - [x] Inline SVG support
 - [x] PWA support
