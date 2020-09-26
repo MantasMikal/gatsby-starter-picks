@@ -23,12 +23,6 @@
       alt="styled with prettier"
     />
   </a>
-  <a href="https://github.com/prettier/prettier">
-    <img
-      src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"
-      alt="styled with prettier"
-    />
-  </a>
   <a href="https://app.netlify.com/sites/gatsby-starter-picks/deploys">
     <img
       src="https://api.netlify.com/api/v1/badges/93ecc1ca-2fd8-427a-96de-245af6e0d17a/deploy-status"
