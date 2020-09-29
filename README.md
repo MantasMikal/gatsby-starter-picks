@@ -37,11 +37,11 @@
 - [x] SCSS Modules
 - [x] Buletproof base level component library to get the boring stuff out of the way
 - [x] Useful set of SCSS utility [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
-- [x] Tested
+- [x] Tests
 - [x] Storybook 6 integration
 - [x] Inline SVG support
-- [x] PWA support
-- [x] Sitemap support
+- [x] PWA
+- [x] Sitemap
 - [x] ESLint
 
 <p align="center">
