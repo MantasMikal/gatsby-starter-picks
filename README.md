@@ -61,17 +61,15 @@ cd gatsby-starter-picks && npm i && npm i -g @sanity/cli gatsby-cli
 # Login to Sanity
 sanity login
 
-# Runs out of the box
+# Run
 # Studio at http://localhost:3333
 # Web frontend at http://localhost:8000
 # GraphiQL explorer at http://localhost:8000/___graphql
 npm start
 
-# When you are ready setup the Sanity.io CMS
-# Create a project and deploy Graphql API
-# Once you launch the site you must go to studio and add some data to Site Settings and Pages/Home
-# Then restart the site
+# Set up a new project on Sanity
 cd studio && sanity init && npm run graphql-deploy && cd ..
+
 
 # Format and lint
 npm run lint
