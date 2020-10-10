@@ -101,7 +101,7 @@ Run Storybook to learn how components work
 
 [gatsby-source-sanity](https://github.com/sanity-io/gatsby-source-sanity)
 
-## Contrubute
+## Contribute
 
 1. [Fork it](https://github.com/MantasMikal/gatsby-starter-picks/fork)
 2. Create your feature branch `git checkout -b feature/fooBar`
