@@ -1,6 +1,5 @@
-<p align="center">
-   <img width="300" src='https://i.imgur.com/GhcxkhC.png'>
-</p>
+<h1 align="center">Picks</h1>
+
 <p align="center">
   An opinionated starter that contains everything you need to quickly ship any type of static site.
 </p>
