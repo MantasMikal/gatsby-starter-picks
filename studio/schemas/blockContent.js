@@ -108,5 +108,8 @@ export default {
     {
       type: "grid",
     },
+    {
+      type: "video",
+    },
   ],
 };

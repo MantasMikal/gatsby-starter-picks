@@ -36,10 +36,14 @@
   max-width: 200px;
   margin-right: spacing(8);
   transition: $duration-short $easing-standard;
+}
 
+.Logo {
+  display: block;
+  transition: $duration-shortest $easing-standard;
   &:hover {
-    transform: scale(1.1);
-    transition: $duration-short $easing-standard;
+    transform: scale(1.02);
+    transition: $duration-shortest $easing-standard;
   }
 }
 

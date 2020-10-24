@@ -9,6 +9,7 @@ import SmartLink from 'Primitive/SmartLink'
 import createGrid from './components/createGrid'
 import createFigure from './components/createFigure'
 import createSlideshow from './components/createSlideshow'
+import createMediaComponent from './components/createMedia'
 
 const serializers = {
   marks: {
@@ -86,6 +87,9 @@ const serializers = {
     },
     grid(props) {
       return createGrid(props.node)
+    },
+    video(props) {
+      return createMediaComponent(props.node)
     }
   }
 }
