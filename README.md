@@ -2,7 +2,7 @@
    <img width="300" src='https://i.imgur.com/GhcxkhC.png'>
 </p>
 <p align="center">
-  An opinionated starter that contains everything you need to quickly ship any type of static site.
+  An opinionated Gatsby starter with useful components and Sanity CMS setup to quickly build sites.
 </p>
 <p align="center">
   <a href='https://gatsby-starter-picks.netlify.com'><b>DEMO</b></a>
@@ -11,18 +11,6 @@
 </p>
   <br>
 <p align="center">
-  <a href="https://github.com/MantasMikal/gatsby-starter-picks/issues">
-    <img
-      src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"
-      alt="Contributions welcome"
-    />
-  </a>
-    <a href="https://github.com/MantasMikal/gatsby-starter-picks/blob/master/LICENSE">
-    <img
-      src="https://img.shields.io/github/license/MantasMikal/gatsby-starter-picks "
-      alt="styled with prettier"
-    />
-  </a>
   <a href="https://app.netlify.com/sites/gatsby-starter-picks/deploys">
     <img
       src="https://api.netlify.com/api/v1/badges/93ecc1ca-2fd8-427a-96de-245af6e0d17a/deploy-status"
@@ -35,18 +23,15 @@
 
 - [x] Sanity.io CMS integration with a few predefined schemas
 - [x] SCSS Modules
-- [x] Buletproof base level component library to get the boring stuff out of the way
-- [x] Useful set of SCSS utility [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
+- [x] Buletproof base level [component library](https://github.com/jackbrewer/picks) to get the boring stuff out of the way
+- [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
 - [x] Tests
-- [x] Storybook 6 integration
-- [x] Inline SVG support
+- [x] Storybook 6
+- [x] Inline SVG
 - [x] PWA
 - [x] Sitemap
 - [x] ESLint
-
-<p align="center">
-  <img width="500" src="https://i.imgur.com/Md3UTQ9.png" alt="Google lighthouse"/>
-</p>
+- [x] [Google Lightouse Test result](https://i.imgur.com/Md3UTQ9.png)
 
 ## Setup
 
