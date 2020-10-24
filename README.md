@@ -31,7 +31,6 @@
 - [x] PWA
 - [x] Sitemap
 - [x] ESLint
-- [x] [Google Lightouse Test result](https://i.imgur.com/Md3UTQ9.png)
 
 ## Setup
 
