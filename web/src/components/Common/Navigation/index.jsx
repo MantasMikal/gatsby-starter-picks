@@ -6,12 +6,18 @@ import Type from 'Primitive/Type'
 import Icon from 'Primitive/Icon'
 import SmartLink from 'Primitive/SmartLink'
 import Image from 'Primitive/Image'
+import Container from 'Primitive/Container'
 
 import styles from './Navigation.module.scss'
 
 const Navigation = ({ onHideNav, onShowNav, showNav, siteTitle, logo, id }) => {
   return (
-    <nav className={classnames(styles.Root, showNav && styles.showNav)} id={id}>
+    <Container
+      gutter
+      as="nav"
+      className={classnames(styles.Root, showNav && styles.showNav)}
+      id={id}
+    >
       <h1 hidden>{siteTitle}</h1>
       <div className={styles.Branding}>
         <SmartLink to="/">
@@ -64,7 +70,7 @@ const Navigation = ({ onHideNav, onShowNav, showNav, siteTitle, logo, id }) => {
           <Icon a11yText="Open Menu" type="burger" width={24} height={24} />
         )}
       </button>
-    </nav>
+    </Container>
   )
 }
 

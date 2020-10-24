@@ -24,7 +24,6 @@
 .Container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   @include mq($breakpoint-mobileLandscape) {
     flex-direction: row;
@@ -70,7 +69,7 @@
 
 .LinkListWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   max-width: 900px;
   @include mq($breakpoint-tablet + 100) {
