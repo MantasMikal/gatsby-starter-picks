@@ -23,7 +23,7 @@
 
 - [x] Sanity.io CMS integration with a few predefined schemas
 - [x] SCSS Modules
-- [x] Buletproof base level [component library](https://github.com/jackbrewer/picks) to get the boring stuff out of the way
+- [x] Buletproof base level [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
 - [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
 - [x] Tests
 - [x] Storybook 6
