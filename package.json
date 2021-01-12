@@ -10,16 +10,13 @@
     "clean": "lerna clean",
     "deploy": "lerna run deploy",
     "empty-cache": "lerna run empty-cache",
-    "init": "cd studio && sanity init && lerna run graphql-deploy && cd ..",
     "storybook": "lerna run storybook --stream",
-    "graphql-deploy": "cd studio && npm run graphql-deploy && cd ..",
     "lint": "lerna run lint --stream",
     "fix": "lerna run fix --stream",
     "test": "lerna run test --stream",
     "build-storybook": "lerna run build-storybook",
     "test-watch": "lerna run test-watch --stream",
     "postinstall": "lerna bootstrap",
-    "sanity-deploy": "lerna run sanity-deploy",
     "start": "lerna run empty-cache && lerna run start --parallel"
   },
   "devDependencies": {

@@ -2,7 +2,7 @@
    <img width="300" src='https://i.imgur.com/GhcxkhC.png'>
 </p>
 <p align="center">
-  An opinionated Gatsby starter with useful components and Sanity CMS setup to quickly build sites.
+  An opinionated Gatsby starter with useful components to quickly build sites.
 </p>
 <p align="center">
   <a href='https://gatsby-starter-picks.netlify.com'><b>DEMO</b></a>
@@ -21,7 +21,6 @@
 
 ## Features
 
-- [x] Sanity.io CMS integration with a few predefined schemas
 - [x] SCSS Modules
 - [x] Buletproof base level [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
 - [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
@@ -93,6 +92,6 @@ Run Storybook to learn how components work
 
 ## Credits
 
-A massive thanks to [@jackbrewer](https://github.com/jackbrewer) for creating and mainting [Picks](https://github.com/jackbrewer/picks) component library and SASS utility [mixins](https://www.npmjs.com/package/backline-mixins)
+A massive thanks to [@jackbrewer](https://github.com/jackbrewer) for creating and maintaining [Picks](https://github.com/jackbrewer/picks) component library and SASS utility [mixins](https://www.npmjs.com/package/backline-mixins)
 
 This starter is inspired by [Sanity](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo)

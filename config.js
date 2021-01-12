@@ -6,11 +6,9 @@ var config = {
     bgColor: "#ffffff",
     themeColor: "#c8167c",
     favIcon: "src/assets/favicon.png",
+    metaImage: "src/assets/favicon.png",
+    metaKeywords: ["Lorem", "ipsum"],
     description: "To be adedd...",
-  },
-  project: {
-    projectId: "21x74mcv",
-    dataset: "production",
   },
 };
 

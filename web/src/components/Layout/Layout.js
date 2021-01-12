@@ -44,7 +44,7 @@ Layout.propTypes = {
   onShowNav: func,
   showNav: bool,
   siteTitle: string,
-  logo: object
+  logo: string
 }
 
 export default Layout

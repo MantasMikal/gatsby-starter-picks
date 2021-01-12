@@ -1,126 +1,86 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
 
-const detailsQuery = graphql`
-  query SEOQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-      metaImage {
-        asset {
-          url
-          metadata {
-            dimensions {
-              width
-              height
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import config from '../../../config'
+function SEO({ title, description, metaImage, keywords, lang, meta }) {
+  const metaDescription = description || config.site.description
+  const metaKeywords = keywords || config.site.metaKeywords
+  const siteTitle = title || config.site.siteTitle
 
-function SEO({ description, lang, meta, keySentence, title, image }) {
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={(data) => {
-        if (!data.site) {
-          return
-        }
-        const metaDescription = description || data.site.description
-
-        const metaImage =
-          image && image.asset && image.asset.url ? image : data.site.metaImage
-
-        const metaKeywords =
-          keySentence ||
-          (data.site.keywords && data.site.keywords.length
-            ? data.site.keywords.join(', ')
-            : null)
-
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang
-            }}
-            title={title}
-            titleTemplate={
-              title === data.site.title ? '%s' : `%s | ${data.site.title}`
-            }
-            meta={[
-              {
-                name: 'description',
-                content: metaDescription
-              },
-              {
-                property: 'og:title',
-                content: title
-              },
-              {
-                property: 'og:description',
-                content: metaDescription
-              },
-              {
-                property: 'og:type',
-                content: 'website'
-              },
-              {
-                name: 'twitter:card',
-                content: 'summary'
-              },
-              {
-                name: 'twitter:title',
-                content: title
-              },
-              {
-                name: 'twitter:description',
-                content: metaDescription
-              }
-            ]
-              .concat(
-                metaImage
-                  ? [
-                      {
-                        property: 'og:image',
-                        content: metaImage.asset.url
-                      },
-                      {
-                        property: 'og:image:width',
-                        content: metaImage.asset.metadata.dimensions.width
-                      },
-                      {
-                        property: 'og:image:height',
-                        content: metaImage.asset.metadata.dimensions.height
-                      },
-                      {
-                        name: 'twitter:card',
-                        content: 'summary_large_image'
-                      }
-                    ]
-                  : [
-                      {
-                        name: 'twitter:card',
-                        content: 'summary'
-                      }
-                    ]
-              )
-              .concat(
-                metaKeywords
-                  ? {
-                      name: 'keywords',
-                      content: metaKeywords
-                    }
-                  : {}
-              )
-              .concat(meta)}
-          />
-        )
+    <Helmet
+      htmlAttributes={{
+        lang
       }}
+      title={siteTitle}
+      titleTemplate={`%s | ${siteTitle}`}
+      meta={[
+        {
+          name: 'description',
+          content: metaDescription
+        },
+        {
+          property: 'og:title',
+          content: title
+        },
+        {
+          property: 'og:description',
+          content: metaDescription
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          name: 'twitter:title',
+          content: title
+        },
+        {
+          name: 'twitter:description',
+          content: metaDescription
+        }
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: metaImage.asset.url
+                },
+                {
+                  property: 'og:image:width',
+                  content: metaImage.asset.metadata.dimensions.width
+                },
+                {
+                  property: 'og:image:height',
+                  content: metaImage.asset.metadata.dimensions.height
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image'
+                }
+              ]
+            : [
+                {
+                  name: 'twitter:card',
+                  content: 'summary'
+                }
+              ]
+        )
+        .concat(
+          metaKeywords
+            ? {
+                name: 'keywords',
+                content: metaKeywords
+              }
+            : {}
+        )
+        .concat(meta)}
     />
   )
 }

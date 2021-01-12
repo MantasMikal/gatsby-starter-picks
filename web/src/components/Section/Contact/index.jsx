@@ -1,7 +1,6 @@
 import React from 'react'
 import { array, string } from 'prop-types'
 
-import BlockContent from '../../Editor'
 import Container from 'Primitive/Container'
 import Type from 'Primitive/Type'
 import TextControl from 'Primitive/TextControl'
@@ -13,17 +12,12 @@ import styles from './Contact.module.scss'
 /**
  * If deployed on Netlify the form will be handled automagically! Just check the 'Forms' section under site settings
  */
-const Contact = ({ body, title }) => {
+const Contact = ({ title }) => {
   return (
     <Container size="wide" center gutter spacious withNavSpace as="section">
       <Type as="h1" size="display" className={styles.Title}>
         {title}
       </Type>
-      {body && (
-        <div className={styles.Body}>
-          <BlockContent blocks={body} />
-        </div>
-      )}
       <form
         name="contact"
         method="post"

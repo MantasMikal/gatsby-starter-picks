@@ -79,7 +79,7 @@ Navigation.propTypes = {
   onShowNav: func,
   showNav: bool,
   siteTitle: string,
-  logo: object,
+  logo: string,
   id: string
 }
 

@@ -1,7 +1,5 @@
 import React from 'react'
 import { array, string } from 'prop-types'
-
-import BlockContent from '../../Editor'
 import Container from 'Primitive/Container'
 import Type from 'Primitive/Type'
 
@@ -22,7 +20,6 @@ const Block = ({ blockContent, title }) => {
           {title}
         </Type>
       )}
-      <BlockContent blocks={blockContent} />
     </Container>
   )
 }

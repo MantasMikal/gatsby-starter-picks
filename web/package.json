@@ -52,7 +52,6 @@
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-source-filesystem": "^2.3.24",
-    "gatsby-source-sanity": "^6.0.4",
     "gatsby-transform-portable-text": "0.0.2",
     "gatsby-transformer-sharp": "^2.5.13",
     "jest-watch-typeahead": "^0.6.0",
