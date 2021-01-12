@@ -2,7 +2,7 @@
    <img width="300" src='https://i.imgur.com/GhcxkhC.png'>
 </p>
 <p align="center">
-  An opinionated Gatsby starter with useful components and Sanity CMS setup to quickly build sites.
+  An opinionated Gatsby starter with custom UI components and Sanity CMS setup to quickly build sites.
 </p>
 <p align="center">
   <a href='https://gatsby-starter-picks.netlify.com'><b>DEMO</b></a>
@@ -45,15 +45,15 @@ cd gatsby-starter-picks && npm i && npm i -g @sanity/cli gatsby-cli
 # Login to Sanity
 sanity login
 
+# Note: Skip this step if you just want to look around
+# Remove all data and set up a new project on Sanity
+cd studio && sanity init && npm run graphql-deploy && cd ..
+
 # Run
 # Studio at http://localhost:3333
 # Web frontend at http://localhost:8000
 # GraphiQL explorer at http://localhost:8000/___graphql
 npm start
-
-# Set up a new project on Sanity
-cd studio && sanity init && npm run graphql-deploy && cd ..
-
 
 # Format and lint
 npm run lint
@@ -93,6 +93,6 @@ Run Storybook to learn how components work
 
 ## Credits
 
-A massive thanks to [@jackbrewer](https://github.com/jackbrewer) for creating and mainting [Picks](https://github.com/jackbrewer/picks) component library and SASS utility [mixins](https://www.npmjs.com/package/backline-mixins)
+A massive thanks to [@jackbrewer](https://github.com/jackbrewer) for creating and maintaining [Picks](https://github.com/jackbrewer/picks) component library and SASS utility [mixins](https://www.npmjs.com/package/backline-mixins)
 
 This starter is inspired by [Sanity](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo)
