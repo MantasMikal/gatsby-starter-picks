@@ -7,8 +7,8 @@
       "Common/*": ["./src/components/Common/*"],
       "Context/*": ["./src/components/Context/*"],
       "Section/*": ["./src/components/Section/*"],
-      "libs/*": ["src/libs/*"],
-      "hooks/*": ["src/hooks/*"]
+      "libs/*": ["./src/libs/*"],
+      "hooks/*": ["./src/hooks/*"]
     }
   }
 }

@@ -1,4 +1,4 @@
-import { FiFileText } from 'react-icons/fi'
+import { FiFileText } from "react-icons/fi";
 
 export default {
   name: "post",
@@ -9,23 +9,24 @@ export default {
     {
       name: "title",
       title: "Title",
-      type: "string"
+      type: "string",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      description: "Some frontend will require a slug to be set to be able to show the post",
+      description:
+        "Some frontend will require a slug to be set to be able to show the post",
       options: {
         source: "title",
-        maxLength: 96
-      }
+        maxLength: 96,
+      },
     },
     {
       name: "isFeatured",
       title: "Is Featured",
       description: "Will add post to the Featured Posts widget",
-      type: "boolean"
+      type: "boolean",
     },
     {
       name: "category",
@@ -33,41 +34,37 @@ export default {
       description:
         "Can be more than one. First you have to create categories (Sidebar -> Categories)",
       type: "array",
-      of: [{ type: "reference", to: { type: "category" } }]
+      of: [{ type: "reference", to: { type: "category" } }],
     },
     {
       name: "publishedAt",
       title: "Published at",
-      description: "You can use this field to schedule post where you show them",
-      type: "datetime"
+      description:
+        "You can use this field to schedule post where you show them",
+      type: "datetime",
     },
     {
       name: "excerpt",
       title: "Excerpt",
-      type: "blockText"
+      type: "blockText",
     },
     {
       name: "mainImage",
       title: "Main image",
-      type: "image"
+      type: "image",
     },
     {
       name: "body",
       title: "Body",
-      type: "blockContent"
-    },
-    {
-      name: "seo",
-      title: "SEO",
-      type: "seo-plugin"
+      type: "blockContent",
     },
     {
       name: "similarPosts",
       title: "Similar posts",
       description: "Similar posts that will be added to the page",
       type: "array",
-      of: [{ type: "reference", to: { type: "post" } }]
-    }
+      of: [{ type: "reference", to: { type: "post" } }],
+    },
   ],
   orderings: [
     {
@@ -75,23 +72,23 @@ export default {
       name: "publishingDateAsc",
       by: [
         { field: "publishedAt", direction: "asc" },
-        { field: "title", direction: "asc" }
-      ]
+        { field: "title", direction: "asc" },
+      ],
     },
     {
       title: "Publishing date old->new",
       name: "publishingDateDesc",
       by: [
         { field: "publishedAt", direction: "desc" },
-        { field: "title", direction: "asc" }
-      ]
-    }
+        { field: "title", direction: "asc" },
+      ],
+    },
   ],
   preview: {
     select: {
       title: "title",
       publishedAt: "publishedAt",
-      image: "mainImage"
+      image: "mainImage",
     },
     prepare({ title = "No title", publishedAt, image }) {
       return {
@@ -99,8 +96,8 @@ export default {
         subtitle: publishedAt
           ? new Date(publishedAt).toLocaleDateString()
           : "Missing publishing date",
-        media: image
+        media: image,
       };
-    }
-  }
+    },
+  },
 };

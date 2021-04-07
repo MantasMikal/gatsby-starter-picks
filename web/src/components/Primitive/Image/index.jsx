@@ -1,58 +1,49 @@
 import React from 'react'
 import { object, number, string, oneOfType } from 'prop-types'
+import { getGatsbyImageData } from 'gatsby-source-sanity'
 
-import GatsbyImage from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import ResponsiveMedia from 'Primitive/ResponsiveMedia'
+import cfg from '../../../../../config'
 
 /**
- * Component to hanlde all types images with ratio support
+ * Component to handle all types images with ratio support
  */
 const Image = ({ image, ratio, imgWrapperStyle, imgStyle, alt, ...other }) => {
   if (!image) return null
+  const imageData = getGatsbyImageData(
+    image.asset,
+    { maxWidth: 700 },
+    cfg.project
+  )
 
-  const fixedImg =
-    image.asset && image.asset.fixed ? image.asset.fixed : undefined
-  const fluidImg =
-    image.asset && image.asset.fluid ? image.asset.fluid : undefined
-  const regularImg = image
-
-  if (fixedImg || fluidImg) {
-    return ratio ? (
+  if (ratio) {
+    return (
       <ResponsiveMedia ratio={ratio}>
         <GatsbyImage
           style={imgWrapperStyle}
           imgStyle={imgStyle}
-          fixed={fixedImg}
-          fluid={fluidImg}
+          image={imageData}
           alt={alt}
           {...other}
         />
       </ResponsiveMedia>
-    ) : (
-      <GatsbyImage
-        style={imgWrapperStyle}
-        imgStyle={imgStyle}
-        fixed={fixedImg}
-        fluid={fluidImg}
-        alt={alt}
-        {...other}
-      />
     )
   }
 
-  if (regularImg) {
-    return ratio ? (
-      <ResponsiveMedia ratio={ratio}>
-        <img src={regularImg} alt={alt} {...other} />
-      </ResponsiveMedia>
-    ) : (
-      <img src={regularImg} alt={alt} {...other} />
-    )
-  }
+  return (
+    <GatsbyImage
+      style={imgWrapperStyle}
+      imgStyle={imgStyle}
+      image={imageData}
+      alt={alt}
+      {...other}
+    />
+  )
 }
 
 Image.propTypes = {
-  image: oneOfType([string, object]),
+  image: oneOfType([string, object]).isRequired,
   ratio: number,
   imgWrapperStyle: object,
   imgStyle: object,

@@ -23,9 +23,8 @@ export const query = graphql`
       subtitle
       hero {
         asset {
-          fluid(maxWidth: 800) {
-            ...GatsbySanityImageFluid_noBase64
-          }
+          url
+          _id
         }
       }
     }
@@ -49,9 +48,8 @@ export const query = graphql`
           }
           mainImage {
             asset {
-              fluid(maxWidth: 500) {
-                ...GatsbySanityImageFluid
-              }
+              url
+              _id
             }
           }
           title

@@ -1,5 +1,8 @@
 import { FaHashtag } from "react-icons/fa";
 
+/**
+ * Category for posts
+ */
 export default {
   name: "category",
   title: "Category",
@@ -9,18 +12,18 @@ export default {
     {
       name: "title",
       title: "Title",
-      type: "string"
+      type: "string",
     },
     {
       name: "description",
       title: "Description",
-      type: "text"
+      type: "text",
     },
     {
       name: "color",
       type: "color",
-      title: "Choose badge color"
-    }
+      title: "Choose badge color",
+    },
   ],
-  liveEdit: true
+  liveEdit: true,
 };

@@ -12,12 +12,6 @@ const detailsQuery = graphql`
       metaImage {
         asset {
           url
-          metadata {
-            dimensions {
-              width
-              height
-            }
-          }
         }
       }
     }
@@ -33,10 +27,7 @@ function SEO({ description, lang, meta, keySentence, title, image }) {
           return
         }
         const metaDescription = description || data.site.description
-
-        const metaImage =
-          image && image.asset && image.asset.url ? image : data.site.metaImage
-
+        const metaImage = image ? image : data.site.metaImage
         const metaKeywords =
           keySentence ||
           (data.site.keywords && data.site.keywords.length
@@ -71,7 +62,7 @@ function SEO({ description, lang, meta, keySentence, title, image }) {
               },
               {
                 name: 'twitter:card',
-                content: 'summary'
+                content: metaDescription
               },
               {
                 name: 'twitter:title',
@@ -87,25 +78,17 @@ function SEO({ description, lang, meta, keySentence, title, image }) {
                   ? [
                       {
                         property: 'og:image',
-                        content: metaImage.asset.url
-                      },
-                      {
-                        property: 'og:image:width',
-                        content: metaImage.asset.metadata.dimensions.width
-                      },
-                      {
-                        property: 'og:image:height',
-                        content: metaImage.asset.metadata.dimensions.height
+                        content: metaImage
                       },
                       {
                         name: 'twitter:card',
-                        content: 'summary_large_image'
+                        content: metaImage
                       }
                     ]
                   : [
                       {
                         name: 'twitter:card',
-                        content: 'summary'
+                        content: metaDescription
                       }
                     ]
               )

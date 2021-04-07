@@ -14,10 +14,8 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "seo-tools",
     "@sanity/dashboard",
     "dashboard-widget-netlify",
-    "media",
     "@sanity/color-input"
   ],
   "parts": [

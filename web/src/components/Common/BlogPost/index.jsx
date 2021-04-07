@@ -13,13 +13,22 @@ import SocialBlock from '../SocialShare/SocialBlock'
 import styles from './BlogPost.module.scss'
 
 const BlogPost = (props) => {
-  const { _rawBody, title, mainImage, publishedAt, category, url } = props
-  const [ref, percentage] = useScrollPercentage({
-    threshold: 0
-  })
+  const { title, mainImage } = props
   return (
     <article className={styles.Root}>
       <Image image={mainImage} alt={title} />
+      <PostContent {...props} />
+    </article>
+  )
+}
+
+const PostContent = (props) => {
+  const [ref, percentage] = useScrollPercentage({
+    threshold: 0
+  })
+  const { _rawBody, title, publishedAt, category, url } = props
+  return (
+    <>
       <div
         className={styles.LoadingBar}
         style={{ width: `${percentage * 100}%` }}
@@ -53,7 +62,7 @@ const BlogPost = (props) => {
           <SocialBlock url={url} />
         </div>
       </Container>
-    </article>
+    </>
   )
 }
 

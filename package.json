@@ -2,9 +2,9 @@
   "private": false,
   "name": "gatsby-starter-picks",
   "version": "1.0.0",
-  "author": "Mantas Mikalauskas <mantas.mikalauskas@clock.co.uk",
+  "author": "Mantas Mikalauskas <mantas.codes@gmail.com>",
   "engines": {
-    "node": "12.x"
+    "node": ">=12.x"
   },
   "scripts": {
     "clean": "lerna clean",
@@ -20,13 +20,14 @@
     "test-watch": "lerna run test-watch --stream",
     "postinstall": "lerna bootstrap",
     "sanity-deploy": "lerna run sanity-deploy",
-    "start": "lerna run empty-cache && lerna run start --parallel"
+    "start": "lerna run empty-cache && lerna run start --parallel",
+    "start-web": "cd web && npm run start",
+    "start-studio": "cd studio && npm run start"
   },
   "devDependencies": {
-    "lerna": "^3.22.1",
+    "lerna": "^4.0.0",
     "rimraf": "^3.0.2"
   },
-  "dependencies": {},
   "keywords": [
     "gatsby-starter",
     "starter",

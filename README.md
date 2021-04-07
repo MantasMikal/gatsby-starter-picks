@@ -21,16 +21,16 @@
 
 ## Features
 
-- [x] Sanity.io CMS integration with a few predefined schemas
+- [x] Gatsby 3
+- [x] Sanity.io CMS integration with a few predefined schemas and widgets
 - [x] SCSS Modules
 - [x] Buletproof base level [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
 - [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
 - [x] Tests
 - [x] Storybook 6
 - [x] Inline SVG
-- [x] PWA
-- [x] Sitemap
-- [x] ESLint
+- [x] PWA ready
+- [x] Netlify contact form
 
 ## Setup
 
@@ -40,7 +40,7 @@ Use NPM
 
 ```bash
 # Install deps
-cd gatsby-starter-picks && npm i && npm i -g @sanity/cli gatsby-cli
+cd gatsby-starter-picks && npm i --legacy-peer-deps && npm i -g @sanity/cli gatsby-cli
 
 # Login to Sanity
 sanity login

@@ -1,9 +1,7 @@
 require('dotenv').config()
 const path = require('path')
 const config = require('../config')
-const {
-  api: { projectId, dataset }
-} = requireConfig('../studio/sanity.json')
+const { projectId, dataset } = config
 
 module.exports = {
   siteMetadata: {
@@ -15,11 +13,20 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        includePaths: [
-          ...require('backline-mixins').includePaths,
-          ...require('backline-normalize').includePaths,
-          path.join(__dirname, 'src/assets/scss/settings')
-        ],
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false
+          }
+        },
+        sassOptions: {
+          includePaths: [
+            ...require('backline-mixins').includePaths,
+            ...require('backline-normalize').includePaths,
+            path.join(__dirname, 'src/assets/scss/settings')
+          ]
+        },
+        sassRuleTest: /\.global\.s(a|c)ss$/,
         sassRuleModulesTest: /\.module\.s(a|c)ss$/
       }
     },
@@ -44,8 +51,9 @@ module.exports = {
         }
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-sanity',
@@ -70,12 +78,6 @@ module.exports = {
         display: 'standalone'
       }
     },
-    {
-      resolve: 'gatsby-transform-portable-text',
-      options: {
-        extendTypes: [{ typeName: 'SanityPost', contentFieldName: 'body' }]
-      }
-    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-offline'
@@ -86,27 +88,4 @@ module.exports = {
     //   }
     // }
   ]
-}
-
-/**
- * We're requiring a file in the studio folder to make the monorepo
- * work "out-of-the-box". Sometimes you would to run this web frontend
- * in isolation (e.g. on codesandbox). This will give you an error message
- * with directions to enter the info manually or in the environment.
- */
-
-function requireConfig(path) {
-  try {
-    return require('../studio/sanity.json')
-  } catch (e) {
-    console.error(
-      'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'
-    )
-    return {
-      api: {
-        projectId: process.env.SANITY_PROJECT_ID || '',
-        dataset: process.env.SANITY_DATASET || ''
-      }
-    }
-  }
 }

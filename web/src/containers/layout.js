@@ -10,9 +10,8 @@ const query = graphql`
       title
       logo {
         asset {
-          fluid(maxWidth: 300) {
-            ...GatsbySanityImageFluid
-          }
+          url
+          _id
         }
       }
     }
