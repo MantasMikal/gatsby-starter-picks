@@ -17,7 +17,7 @@ const Layout = ({
   logo
 }) => {
   return (
-    <div className={styles.Wrapper}>
+    <div className={styles.Layout}>
       <A11yNavigation>
         <a href="#content">Jump to main content</a>
         <a href="#navigation">Jump to primary navigation</a>

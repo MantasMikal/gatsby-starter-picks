@@ -9,17 +9,14 @@ import MasonryLayout from 'Primitive/MasonryLayout'
 import styles from './Blog.module.scss'
 
 const Blog = ({ blogNodes }) => {
-  let blogposts = []
-  for (let i = 0; i < blogNodes.length; i++) {
-    blogposts.push(
-      <BlogPostPreview
-        key={blogNodes[i].id}
-        className={styles.BlogPostPreview}
-        {...blogNodes[i]}
-        surround
-      />
-    )
-  }
+  const blogPosts = blogNodes.map((post) => (
+    <BlogPostPreview
+      key={post.id}
+      className={styles.BlogPostPreview}
+      surround
+      {...post}
+    />
+  ))
 
   return (
     <Container
@@ -34,13 +31,13 @@ const Blog = ({ blogNodes }) => {
       <Type as="h1" size="display" className={styles.Title}>
         Blog
       </Type>
-      <MasonryLayout items={blogposts} gap={25} />
+      <MasonryLayout items={blogPosts} gap={25} />
     </Container>
   )
 }
 
 Blog.propTypes = {
-  galleryNodes: array
+  blogNodes: array.isRequired
 }
 
 export default Blog

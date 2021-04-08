@@ -1,7 +1,7 @@
 require('dotenv').config()
 const path = require('path')
 const config = require('../config')
-const { projectId, dataset } = config
+const { projectId, dataset } = config.project
 
 module.exports = {
   siteMetadata: {

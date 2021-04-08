@@ -13,6 +13,9 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  @include mq($breakpoint-tablet) {
+    max-width: 60%;
+  }
 }
 
 .Title {

@@ -28,10 +28,6 @@
       "path": "./deskStructure.js"
     },
     {
-      "implements": "part:@sanity/form-builder/input/image/asset-sources",
-      "path": "./assetSources.js"
-    },
-    {
       "implements": "part:@sanity/dashboard/config",
       "path": "./dashboardConfig.js"
     }
