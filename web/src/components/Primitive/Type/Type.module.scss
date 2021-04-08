@@ -85,18 +85,8 @@
   font-family: $font-body;
 
   @include mq($breakpoint-mobile-large) {
-    font-size: spacing(3);
-    line-height: spacing(4);
-  }
-
-  @include mq($breakpoint-mobileLandscape) {
-    font-size: spacing(3);
-    line-height: spacing(4);
-  }
-
-  @include mq($breakpoint-tablet) {
-    font-size: spacing(3); // 40
-    line-height: spacing(4); // 48
+    font-size: spacing(2.5);
+    line-height: spacing(3);
   }
 
   @include mq($breakpoint-desktop) {

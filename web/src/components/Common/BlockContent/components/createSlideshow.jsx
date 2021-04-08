@@ -8,9 +8,8 @@ import createMedia from './createMedia'
 // - slides per page
 
 const createSlideshow = (node) => {
-  return <Carousel>{node.slides.map((item) => createMedia(item))}</Carousel>
+  const media = node.slides.map((item) => createMedia(item))
+  return <Carousel>{media}</Carousel>
 }
-
-createSlideshow.propTypes = {}
 
 export default createSlideshow

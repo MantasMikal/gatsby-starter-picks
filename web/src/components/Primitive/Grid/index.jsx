@@ -5,7 +5,7 @@ import styles from './Grid.module.scss'
 
 /**
  * Used by portable text editor for grid customisation
- * See Editor/components/createGrid.jsx
+ * See Common/ContentBlock
  * TODO:
  * This can be improved so we don't pass inline styles directly
  */

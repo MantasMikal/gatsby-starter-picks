@@ -16,7 +16,7 @@ const Image = ({ image, ratio, imgWrapperStyle, imgStyle, alt, ...other }) => {
     { maxWidth: 700 },
     cfg.project
   )
-
+  const altText = alt || image.alt || ''
   if (ratio) {
     return (
       <ResponsiveMedia ratio={ratio}>
@@ -24,7 +24,7 @@ const Image = ({ image, ratio, imgWrapperStyle, imgStyle, alt, ...other }) => {
           style={imgWrapperStyle}
           imgStyle={imgStyle}
           image={imageData}
-          alt={alt}
+          alt={altText}
           {...other}
         />
       </ResponsiveMedia>
@@ -36,7 +36,7 @@ const Image = ({ image, ratio, imgWrapperStyle, imgStyle, alt, ...other }) => {
       style={imgWrapperStyle}
       imgStyle={imgStyle}
       image={imageData}
-      alt={alt}
+      alt={altText}
       {...other}
     />
   )

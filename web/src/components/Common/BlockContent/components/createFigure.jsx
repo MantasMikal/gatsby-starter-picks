@@ -7,7 +7,6 @@ const createFigure = (figure) => {
   const { isZoomable, asset, alt, maxWidth } = figure
 
   let imgCmp = <Image image={figure} />
-
   if (asset.mimeType === 'image/gif') {
     imgCmp = (
       <img
@@ -21,7 +20,7 @@ const createFigure = (figure) => {
 
   return (
     <div key={figure._key} style={{ maxWidth: maxWidth }}>
-      {!isZoomable ? { imgCmp } : <Zoomable>{imgCmp}</Zoomable>}
+      {!isZoomable ? imgCmp : <Zoomable>{imgCmp}</Zoomable>}
     </div>
   )
 }

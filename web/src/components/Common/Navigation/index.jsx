@@ -24,12 +24,12 @@ const Navigation = ({ onHideNav, onShowNav, showNav, siteTitle, logo, id }) => {
           <Image image={logo} className={styles.Logo} alt={siteTitle} />
         </SmartLink>
       </div>
-      <LinkWrapper className={styles.NavLink} to="/contact/">
+      <Link className={styles.NavLink} to="/contact/">
         Contact
-      </LinkWrapper>
-      <LinkWrapper className={styles.NavLink} to="/blog/">
+      </Link>
+      <Link className={styles.NavLink} to="/blog/">
         Blog
-      </LinkWrapper>
+      </Link>
       <div className={styles.Dropdown}>
         <SmartLink className={styles.DropdownBtn}>
           <Type as="span" size="menu">
@@ -37,29 +37,29 @@ const Navigation = ({ onHideNav, onShowNav, showNav, siteTitle, logo, id }) => {
           </Type>
         </SmartLink>
         <div className={styles.DropdownContent}>
-          <LinkWrapper
+          <Link
             className={classnames(styles.NavLink, styles.DropdownLink)}
             to="/"
           >
             Sub Nav 1
-          </LinkWrapper>
-          <LinkWrapper
+          </Link>
+          <Link
             className={classnames(styles.NavLink, styles.DropdownLink)}
             to="/"
           >
             SubNav 2
-          </LinkWrapper>
-          <LinkWrapper
+          </Link>
+          <Link
             className={classnames(styles.NavLink, styles.DropdownLink)}
             to="/"
           >
             SubNav 3
-          </LinkWrapper>
+          </Link>
         </div>
       </div>
-      <LinkWrapper className={styles.NavLink} to="/about/">
+      <Link className={styles.NavLink} to="/about/">
         About
-      </LinkWrapper>
+      </Link>
       <button
         className={styles.ToggleNavButton}
         onClick={showNav ? onHideNav : onShowNav}
@@ -85,7 +85,7 @@ Navigation.propTypes = {
 
 export default Navigation
 
-const LinkWrapper = ({ children, to, className, highlight, ...other }) => (
+const Link = ({ children, to, className, highlight, ...other }) => (
   <SmartLink
     className={classnames(className, highlight && styles.highlight)}
     to={to}
@@ -97,7 +97,7 @@ const LinkWrapper = ({ children, to, className, highlight, ...other }) => (
   </SmartLink>
 )
 
-LinkWrapper.propTypes = {
+Link.propTypes = {
   children: node,
   to: string,
   className: string,

@@ -3,7 +3,7 @@ import { object, string, array } from 'prop-types'
 import { formatDate } from 'libs/helpers'
 import { useScrollPercentage } from 'react-scroll-percentage'
 
-import BlockContent from '../../Editor'
+import BlockContent from 'Common/BlockContent'
 import Container from 'Primitive/Container'
 import Image from 'Primitive/Image'
 import Type from 'Primitive/Type'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { array, string } from 'prop-types'
 
-import BlockContent from '../../Editor'
+import BlockContent from 'Common/BlockContent'
 import Container from 'Primitive/Container'
 import Type from 'Primitive/Type'
 
