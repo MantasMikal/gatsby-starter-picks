@@ -47,7 +47,7 @@
 
   @include mq($breakpoint-tablet) {
     right: spacing(1);
-    top: spacing(-2);
+    top: spacing(-5);
   }
 }
 
@@ -58,6 +58,6 @@
 
   @include mq($breakpoint-tablet) {
     right: spacing(7);
-    top: spacing(-2);
+    top: spacing(-5);
   }
 }
