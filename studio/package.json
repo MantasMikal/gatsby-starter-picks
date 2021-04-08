@@ -9,7 +9,7 @@
   "scripts": {
     "deploy": "npm run graphql-deploy && npm run sanity-deploy",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
-    "graphql-deploy": "sanity graphql deploy --playground --generation gen2",
+    "graphql-deploy": "sanity graphql deploy --playground --generation gen3",
     "sanity-deploy": "sanity deploy",
     "start": "sanity start",
     "build": "sanity build",

@@ -35,5 +35,8 @@
     "gatsby",
     "sanity",
     "template"
-  ]
+  ],
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
 }

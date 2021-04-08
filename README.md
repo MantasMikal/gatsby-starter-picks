@@ -46,7 +46,7 @@ cd gatsby-starter-picks && npm i --legacy-peer-deps && npm i -g @sanity/cli gats
 sanity login
 
 # Note: Skip this step if you just want to look around
-# Remove all data and set up a new project on Sanity
+# Removes existing sanity config and sets up a new project
 cd studio && sanity init && npm run graphql-deploy && cd ..
 
 # Run
