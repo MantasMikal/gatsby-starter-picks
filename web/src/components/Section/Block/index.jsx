@@ -7,6 +7,9 @@ import Type from 'Primitive/Type'
 
 import styles from './Block.module.scss'
 
+/**
+ * BlockContent with a title
+ */
 const Block = ({ blockContent, title }) => {
   return (
     <Container

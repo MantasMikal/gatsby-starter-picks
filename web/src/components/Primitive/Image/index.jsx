@@ -17,6 +17,7 @@ const Image = ({ image, ratio, imgWrapperStyle, imgStyle, alt, ...other }) => {
     cfg.project
   )
   const altText = alt || image.alt || ''
+
   if (ratio) {
     return (
       <ResponsiveMedia ratio={ratio}>

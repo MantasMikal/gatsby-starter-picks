@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import Layout from '../containers/MainLayout'
 import Container from 'Primitive/Container'
 import Type from 'Primitive/Type'
 

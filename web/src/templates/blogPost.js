@@ -4,7 +4,7 @@ import Container from 'Primitive/Container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import BlogPost from 'Common/BlogPost'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import Layout from '../containers/MainLayout'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {

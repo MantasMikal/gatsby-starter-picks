@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { mapEdgesToNodes } from '../libs/helpers'
+import { mapEdgesToNodes } from 'libs/helpers'
 import GraphQLErrorList from '../components/graphql-error-list'
 
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import Layout from '../containers/MainLayout'
 import BlogSection from 'Section/Blog'
 
 export const query = graphql`

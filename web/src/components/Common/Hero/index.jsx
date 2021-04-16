@@ -10,12 +10,7 @@ import styles from './Hero.module.scss'
 const Hero = ({ heroImage, title, subtitle }) => {
   return (
     <div className={styles.Hero}>
-      <Image
-        image={heroImage}
-        loading="eager"
-        durationFadeIn={150}
-        alt={title}
-      />
+      <Image image={heroImage} durationFadeIn={150} alt={title} />
       <div className={styles.Content}>
         <Container size="wide" gutter center>
           <Type size="display" as="h2" className={styles.Title}>

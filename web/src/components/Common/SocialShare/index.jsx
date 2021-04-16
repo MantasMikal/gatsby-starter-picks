@@ -13,7 +13,7 @@ const getLink = (type, url) => {
       return `https://facebook.com/sharer/sharer.php?u=${url}`
 
     case 'twitter':
-      return `https://twitter.com/intent/tweet/?&url=${url}&`
+      return `https://twitter.com/intent/tweet/?&url=${url}`
 
     case 'linkedin':
       return `https://www.linkedin.com/shareArticle?mini=true&url=${url}`

@@ -4,7 +4,7 @@ import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../libs/helpers'
 
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import Layout from '../containers/MainLayout'
 import Hero from 'Common/Hero'
 import BlogPostCarouselSection from 'Section/BlogPostCarousel'
 import BlockSection from 'Section/Block'
@@ -13,8 +13,10 @@ export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
-      description
-      keywords
+      openGraph {
+        keywords
+        description
+      }
     }
 
     home: sanityHomePage(_id: { regex: "/(drafts.|)homePage/" }) {
@@ -98,9 +100,9 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
+        title={site.openGraph.title}
+        description={site.openGraph.description}
+        keywords={site.openGraph.keywords}
       />
       <h1 hidden>Welcome to {site.title}</h1>
       {home && <Hero heroImage={hero} title={title} subtitle={subtitle} />}

@@ -72,7 +72,7 @@
   justify-content: space-around;
   flex-direction: column;
   max-width: 900px;
-  @include mq($breakpoint-tablet + 100) {
+  @include mq($breakpoint-tablet) {
     flex: 1 1 60%;
     flex-direction: row;
   }
@@ -98,7 +98,7 @@
     color: inherit;
   }
 
-  @include mq($breakpoint-tablet + 100) {
+  @include mq($breakpoint-tablet) {
     &::after {
       content: none;
     }

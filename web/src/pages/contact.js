@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import Layout from '../containers/MainLayout'
 import ContactSection from 'Section/Contact'
 
 export const query = graphql`

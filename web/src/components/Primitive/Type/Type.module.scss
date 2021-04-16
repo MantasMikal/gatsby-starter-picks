@@ -84,7 +84,7 @@
   font-weight: 500;
   font-family: $font-body;
 
-  @include mq($breakpoint-mobile-large) {
+  @include mq($breakpoint-mobileLarge) {
     font-size: spacing(2.5);
     line-height: spacing(3);
   }
