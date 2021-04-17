@@ -40,12 +40,12 @@ Use NPM
 
 ```bash
 # Install deps
-cd gatsby-starter-picks && npm i --legacy-peer-deps && npm i -g @sanity/cli gatsby-cli
+cd gatsby-starter-picks && npm i && npm i -g @sanity/cli gatsby-cli
 
 # Login to Sanity
 sanity login
 
-# Note: Skip this step if you just want to look around
+# Note: Skip this step if you want to look around first
 # Removes existing sanity config and sets up a new project
 cd studio && sanity init && npm run graphql-deploy && cd ..
 
