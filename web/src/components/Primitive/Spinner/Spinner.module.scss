@@ -1,8 +1,9 @@
+@use "sass:math";
 @import 'settings';
 @import '_backline-mixins';
 
 $spinner-duration: 800ms;
-$spinner-step-duration: $spinner-duration / 8;
+$spinner-step-duration: math.div($spinner-duration, 8);
 
 .Spinner {
   display: inline-block;

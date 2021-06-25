@@ -1,6 +1,6 @@
 import React from 'react'
-import createGrid from './components/createGrid'
-import createMedia from './components/createMedia'
+import Grid from './widgets/Grid'
+import createMedia from './widgets/Media'
 
 /**
  * Used to create components coming from CMS
@@ -12,7 +12,7 @@ export default function createComponents(components) {
   return components.map((component) => {
     switch (component._type) {
       case 'grid':
-        return createGrid(component)
+        return Grid(component)
       case 'image':
         return createMedia(component)
       case 'figure':

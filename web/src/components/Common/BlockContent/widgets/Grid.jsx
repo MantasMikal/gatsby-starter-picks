@@ -1,8 +1,8 @@
 import React from 'react'
-import createMedia from './createMedia'
+import createMedia from './Media'
 import Grid from 'Primitive/Grid'
 
-export function createGrid(component) {
+export function GridWidget(component) {
   const gridMedia = component.gridMedia
   if (!gridMedia) return <> </>
 
@@ -40,4 +40,4 @@ export function createGrid(component) {
   )
 }
 
-export default createGrid
+export default GridWidget

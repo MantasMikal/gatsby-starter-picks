@@ -1,7 +1,7 @@
 import React from 'react'
 import BlockContent from '../index'
 
-const createContentBlock = (block) => {
+const ContentBlock = (block) => {
   const margin = block.margin ? { margin: `${block.margin}` } : null
   const padding = block.padding ? { padding: `${block.padding}` } : null
   const border = block.border ? { border: `${block.border}` } : null
@@ -14,4 +14,4 @@ const createContentBlock = (block) => {
   )
 }
 
-export default createContentBlock
+export default ContentBlock

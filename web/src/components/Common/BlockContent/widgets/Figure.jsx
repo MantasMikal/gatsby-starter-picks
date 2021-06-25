@@ -2,7 +2,7 @@ import React from 'react'
 import Zoomable from 'Primitive/Zoomable'
 import Image from 'Primitive/Image'
 
-const createFigure = (figure) => {
+const Figure = (figure) => {
   if (!figure || !figure.asset || !figure.asset.mimeType) return null
   const { isZoomable, asset, alt, maxWidth } = figure
 
@@ -25,4 +25,4 @@ const createFigure = (figure) => {
   )
 }
 
-export default createFigure
+export default Figure

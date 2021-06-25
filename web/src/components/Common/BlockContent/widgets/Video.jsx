@@ -1,7 +1,7 @@
 import React from 'react'
 import Video from 'Primitive/Video'
 
-const createVideo = (video) => {
+const VideoWidget = (video) => {
   if (!video || !video.videoId || !video.videoType) return null
   return (
     <Video
@@ -12,4 +12,4 @@ const createVideo = (video) => {
   )
 }
 
-export default createVideo
+export default VideoWidget

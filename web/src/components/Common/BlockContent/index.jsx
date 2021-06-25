@@ -6,10 +6,10 @@ import Blockquote from 'Primitive/Blockquote'
 import ButtonStandard from 'Primitive/ButtonStandard'
 import SmartLink from 'Primitive/SmartLink'
 
-import createGrid from './components/createGrid'
-import createFigure from './components/createFigure'
-import createSlideshow from './components/createSlideshow'
-import createMediaComponent from './components/createMedia'
+import Grid from './widgets/Grid'
+import Figure from './widgets/Figure'
+import Slideshow from './widgets/Slideshow'
+import Media from './widgets/Media'
 
 const serializers = {
   marks: {
@@ -80,16 +80,16 @@ const serializers = {
       }
     },
     figure(props) {
-      return createFigure(props.node)
+      return Figure(props.node)
     },
     slideshow(props) {
-      return createSlideshow(props.node)
+      return Slideshow(props.node)
     },
     grid(props) {
-      return createGrid(props.node)
+      return Grid(props.node)
     },
     video(props) {
-      return createMediaComponent(props.node)
+      return Media(props.node)
     }
   }
 }
