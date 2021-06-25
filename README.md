@@ -24,13 +24,12 @@
 - [x] Gatsby 3
 - [x] Sanity.io CMS integration with a few predefined schemas and widgets
 - [x] SCSS Modules
-- [x] Buletproof base level [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
+- [x] Buletproof primitive [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
 - [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
-- [x] Tests
+- [x] Tested
 - [x] Storybook 6
 - [x] Inline SVG
-- [x] PWA ready
-- [x] Netlify contact form
+- [x] Contact form
 
 ## Setup
 
