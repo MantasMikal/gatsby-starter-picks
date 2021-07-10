@@ -1,5 +1,5 @@
 <p align="center">
-   <img width="300" src='/web/src/assets/logo.png'>
+   <img width="300" src='/web/src/assets/favicon.png'>
 </p>
 <p align="center">
   An opinionated Gatsby starter with custom UI components and Sanity CMS setup to quickly build sites.
