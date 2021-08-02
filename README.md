@@ -2,7 +2,7 @@
    <img width="300" src='/web/src/assets/favicon.png'>
 </p>
 <p align="center">
-  An opinionated Gatsby starter with [custom UI components](https://gatsby-starter-picks-storybook.netlify.app/) and Sanity CMS setup to quickly build sites.
+  An opinionated Gatsby starter with <a href="https://gatsby-starter-picks-storybook.netlify.app/" target="__blank">custom UI components</a> and Sanity CMS setup to quickly build sites.
 </p>
 <p align="center">
   <a href='https://gatsby-starter-picks.netlify.com'><b>DEMO</b></a>
