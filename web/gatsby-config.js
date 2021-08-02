@@ -19,6 +19,11 @@ module.exports = {
             namedExport: false
           }
         },
+        additionalData: `
+        @use "sass:math";
+        @import 'settings';
+        @import '_backline-mixins';
+      `,
         sassOptions: {
           includePaths: [
             ...require('backline-mixins').includePaths,

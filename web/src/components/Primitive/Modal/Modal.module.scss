@@ -1,6 +1,3 @@
-@import 'settings';
-@import '_backline-mixins';
-
 @mixin modal-fade-in($duration: 1000, $delay: 0) {
   animation: modal-fade-in ($duration * 1ms) ($delay * 1ms) $ease-out-cubic 1
     forwards;

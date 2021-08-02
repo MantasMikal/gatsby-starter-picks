@@ -114,3 +114,6 @@ dist
 
 package_lock.json
 .DS_STORE
+
+
+storybook-static/

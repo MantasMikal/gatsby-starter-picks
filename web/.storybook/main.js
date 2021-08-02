@@ -11,6 +11,9 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-backgrounds'
   ],
+  core: {
+    builder: 'webpack5'
+  },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -56,8 +59,9 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            modules: true,
-            localIdentName: '[name]__[local]___[hash:base64:5]'
+            modules: {
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
           }
         },
         {
@@ -69,6 +73,7 @@ module.exports = {
               ]
             },
             additionalData: `
+              @use "sass:math";
               @import 'settings';
             `
           }
