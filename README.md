@@ -24,7 +24,7 @@
 - [x] Gatsby 3
 - [x] Sanity.io CMS integration with a few predefined schemas and widgets
 - [x] SCSS Modules
-- [x] Buletproof primitive [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
+- [x] Buletproof primitive [component library](https://gatsby-starter-picks-storybook.netlify.app/) to get the boring stuff out of the way
 - [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
 - [x] Tests included
 - [x] Storybook 6
@@ -72,7 +72,7 @@ npm run storybook
 
 ## Read the docs
 
-Run Storybook to learn how components work
+[Run Storybook to learn how components work](https://gatsby-starter-picks-storybook.netlify.app/)
 
 [Getting started with Sanity.io](https://www.sanity.io/blog/get-started-with-gatsby-and-structured-content)
 
