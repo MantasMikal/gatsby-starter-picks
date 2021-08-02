@@ -26,10 +26,8 @@
 - [x] SCSS Modules
 - [x] Buletproof primitive [component library](https://github.com/MantasMikal/gatsby-starter-picks/tree/master/web/src/components/Primitive) to get the boring stuff out of the way
 - [x] Useful SCSS utilities [mixins](https://www.npmjs.com/package/backline-mixins) to aid development
-- [x] Tested
+- [x] Tests included
 - [x] Storybook 6
-- [x] Inline SVG
-- [x] Contact form
 
 ## Setup
 
